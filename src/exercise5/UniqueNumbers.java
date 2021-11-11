@@ -18,11 +18,11 @@ public class UniqueNumbers {
         }
 
         int[] uniqueNumbers = new int[numbers.length];
-        // Find unique numbers in numbers
-        numbers[0] = uniqueNumbers[0];
+        
+        uniqueNumbers[0] = numbers[0];
 
-        for (int index = 0; index < numbers.length; index++) {
-          for (int j = 0; j < numbers.length; j++) {
+        for (int index = 1; index < numbers.length; index++) {
+          for (int j = 0; j < uniqueNumbers.length; j++) {
             if (uniqueNumbers[j] == numbers[index]) {
               break;
             } else if (uniqueNumbers[j] == 0) {
